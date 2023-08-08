@@ -1,0 +1,24 @@
+@startuml 
+
+interface Abstraction {
+    {method} some_action
+}
+
+class Implementation1 {
+    {method} some_action
+}
+
+class Implementation2 {
+    {method} some_action
+}
+
+Abstraction <|-- Implementation1
+Abstraction <|-- Implementation2 
+
+class UserCode {
+
+}
+
+UserCode --> Abstraction
+
+@enduml 
