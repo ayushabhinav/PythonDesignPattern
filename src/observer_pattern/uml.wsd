@@ -1,0 +1,30 @@
+@startuml
+
+interface ObserverInterface {
+    {method} __call__()
+}
+
+
+class Core {
+    {method} attach(observer)
+    {method} set()
+    {method} get()
+}
+
+
+class Observer1 {
+
+}
+
+class Observer2 {
+
+}
+
+
+ObserverInterface <|.. Observer1
+ObserverInterface <|.. Observer2
+
+Core o-- ObserverInterface
+
+
+@enduml
