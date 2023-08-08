@@ -1,0 +1,31 @@
+@startuml
+
+Interface interface {
+    {method} some_action()
+}
+
+class Core {
+    {method} some_action()
+}
+
+class Decorator1{
+    {method} some_action()
+}
+
+class Decorator2{
+    {method} some_action()
+}
+
+
+
+interface <|.. Core
+interface <|.. Decorator1
+interface <|.. Decorator2
+
+Decorator1 o-- interface  
+Decorator2 o-- interface 
+
+
+@enduml
+
+-- relation between decorator and interface is aggregation relation
