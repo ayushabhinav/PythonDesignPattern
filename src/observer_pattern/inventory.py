@@ -1,15 +1,17 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import Any
 
 
 # Observer Abstract Base class
 class Observer(ABC):
+    @abstractmethod
     def __call__(self, *args, **kwargs):
         raise NotImplementedError
     
     def __str__(self) -> str:
-        raise NotImplementedError
-
+        return self.__class__.__name__
+        
+        
 # Core Class
 class Inventory:
     def __init__(self) -> None:
@@ -54,8 +56,8 @@ class ConsoleObserver(Observer):
         print(f'Product:{self.inventory.product}')
         print(f'Quantity:{self.inventory.quantity}')
         
-    def __str__(self) -> str:
-        return self.__class__.__name__ 
+    # def __str__(self) -> str:
+    #     return self.__class__.__name__ 
         
 # Observer Concrete Class
 class FileObserver(Observer):
@@ -66,8 +68,8 @@ class FileObserver(Observer):
         print(f'print to file: product :{self.inventory.product}')
         print(f'print to file: quantity :{self.inventory.quantity}')
                 
-    def __str__(self) -> str:
-        return self.__class__.__name__
+    # def __str__(self) -> str:
+    #     return self.__class__.__name__
     
 
 # Main Method
