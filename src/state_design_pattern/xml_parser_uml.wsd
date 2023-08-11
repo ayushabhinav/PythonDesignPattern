@@ -1,0 +1,15 @@
+@startuml
+
+    FirstTag --> ChildNode
+
+    ChildNode --> OpenTag
+    OpenTag --> ChildNode
+
+    ChildNode --> Text
+    Text --> ChildNode
+
+    ChildNode --> CloseTag
+    CloseTag --> ChildNode
+
+
+@enduml 

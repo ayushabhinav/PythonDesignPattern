@@ -1,0 +1,19 @@
+<book>
+    <author>Ayush Abhinav</author>
+    <publisher> My Publishing</publisher>
+    <title>Python Design Pattern</title>
+    <content>
+        <chapter>
+            <number>1</number>
+            <title>Decortor Pattern</title>
+        </chapter>
+        <chapter>
+            <number>2</number>
+            <title>Observer Pattern</title>
+        </chapter>
+        <chapter>
+            <number>3</number>
+            <title>Strategy Pattern</title>
+        </chapter>
+    </content>
+</book>

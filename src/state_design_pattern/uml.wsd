@@ -1,0 +1,38 @@
+@startuml 
+
+
+class Context {
+    current_state
+    {method} process()
+}
+
+
+class State1{
+    {method} process()
+}
+
+
+class State2{
+    {method} process()
+}
+
+class State3{
+    {method} process()
+}
+
+class State4{
+    {method} process()
+}
+
+
+Context <|-- State1
+Context <|-- State2
+Context <|-- State3
+Context <|-- State4
+
+
+
+UserCode --> Context
+
+
+@enduml 
