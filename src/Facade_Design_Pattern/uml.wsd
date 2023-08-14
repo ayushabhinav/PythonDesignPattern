@@ -1,0 +1,20 @@
+@startuml 
+
+component Facade
+
+package BigSystem {
+    component complexSystem_1
+    component complexSystem_2
+    component complexSystem_3
+    component complexSystem_4
+    component complexSystem_..
+    component complexSystem_n
+}
+
+User --> Facade
+Facade ---> BigSystem
+
+@enduml
+
+
+
