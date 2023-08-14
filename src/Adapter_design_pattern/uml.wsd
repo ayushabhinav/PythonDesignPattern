@@ -1,0 +1,18 @@
+
+@startuml 
+
+
+class Adapter{
+    {method} some_action(some_arguments)
+}
+
+
+Interface Interface
+Interface Interface2
+
+Interface -- Adapter
+Adapter -- Interface2
+
+
+
+@enduml 

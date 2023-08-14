@@ -10,7 +10,7 @@ class QueryTemplate:
     def construct_query(self):
         raise NotImplementedError()
 
-    def execute_query(self):
+    def execute_query(self):  # This is template method
         results = self.conn.execute(self.query)
         self.result = results.fetchall()
 
