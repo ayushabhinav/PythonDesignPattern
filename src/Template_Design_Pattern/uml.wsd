@@ -1,0 +1,26 @@
+@startuml 
+
+class BaseClass {
+    {method} do_process()
+    {method} step1()
+    {method} step2()
+    {method} step3()
+    {method} step4()
+}
+
+class ChildClass1{
+    {method} step2()
+}
+
+class ChildClass2{
+    {method} step3()
+}
+
+
+BaseClass <|-- ChildClass1
+BaseClass <|-- ChildClass2
+
+
+User --> BaseClass
+
+@enduml 
