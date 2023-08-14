@@ -1,0 +1,15 @@
+
+
+@startuml 
+
+
+class Singleton{
+    instance
+    {method} get_instance()
+}
+
+
+Singleton --> Singleton
+
+
+@enduml 
