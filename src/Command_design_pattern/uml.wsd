@@ -1,0 +1,22 @@
+@startuml 
+
+
+interface CommandInterface{
+    {method}execute()
+}
+
+class Command{
+    {method}execute()
+}
+
+
+CommandInterface <|-- Command
+
+Client o-- Command
+Client  o-- Receiver
+Receiver --o Command
+
+
+Invoker o-- CommandInterface
+
+@enduml
