@@ -1,0 +1,17 @@
+
+
+@startuml 
+
+class FlyweightFactory{
+    {method} get_flyweight()
+}
+
+class Flyweight{
+    shared_state
+    {method} shared_action(specific_state)
+}
+
+FlyweightFactory o--> Flyweight
+
+Flyweight -- specific_state
+@enduml 
