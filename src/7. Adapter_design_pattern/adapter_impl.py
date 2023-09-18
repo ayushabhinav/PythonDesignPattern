@@ -4,7 +4,9 @@ import datetime
 # preexisting object
 class AgeCalculator:
     def __init__(self, birthday: str):
-        self.year, self.month, self.day = (int(x) for x in birthday.split("-"))
+        self.year, self.month, self.day = (
+            int(x) for x in birthday.split("-")
+        )  # 2023-09-15
 
     def calculate_age(self, date: str):
         year, month, day = (int(x) for x in date.split("-"))
